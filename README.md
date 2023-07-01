@@ -14,7 +14,7 @@ SQLDataExtractor is a .NET CLI tool that provides functionality for extracting d
 |            | Schema Extraction | Row Extraction |
 | :--------- | :---------------: | :------------: |
 | MySQL      |        :x:        |      :x:       |
-| PostgreSQL |        :x:        |      :x:       |
+| PostgreSQL |        :white_check_mark:        |      :white_check_mark:       |
 
 ## Getting Started
 

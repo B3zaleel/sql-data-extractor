@@ -10,6 +10,7 @@ public class Program
 {
     private static readonly Dictionary<Database, DbActor> _dbActors = new()
     {
+        { Database.PostgreSql, new PostgreSql() },
     };
 
     public static async Task<int> Main(string[] args)
