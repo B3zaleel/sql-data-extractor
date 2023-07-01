@@ -1,13 +1,21 @@
+using System.Collections.Generic;
 using System.CommandLine;
 using System.Threading.Tasks;
+using SqlDataExtractor.Actors;
+using SqlDataExtractor.Core;
 
 namespace SqlDataExtractor;
 
 public class Program
 {
+    private static readonly Dictionary<Database, DbActor> _dbActors = new()
+    {
+    };
+
     public static async Task<int> Main(string[] args)
     {
         var appCommand = new RootCommand("An application for extracting data from SQL-based databases.");
+        Config.RegisterCommands(appCommand, _dbActors);
         return await appCommand.InvokeAsync(args);
     }
 
