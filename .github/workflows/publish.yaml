@@ -8,13 +8,16 @@ jobs:
   publish:
     name: Publish Package
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [7.x, 6.x]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Set up .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 7.x
+          dotnet-version: ${{ matrix.version }}
       - name: Build and pack project files
         run: dotnet pack -c Release
       - name: Push Nuget packages to Nuget
