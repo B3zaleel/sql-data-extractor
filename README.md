@@ -20,20 +20,22 @@ SQLDataExtractor is a .NET CLI tool that provides functionality for extracting d
 
 ### Installation
 
-Install the [dotnet](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) CLI tool. Download or clone this repository.
+Install the [dotnet](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) CLI tool and run the following command.
+
+``` powershell
+dotnet tool install SqlDataExtractor
+```
 
 ### Usage
 
-Navigate to this repository's folder on the terminal and run the program. Some example commands are shown below:
+Make sure to add the dotnet tools folder to your system/shell's **PATH**. Some example commands are shown below:
 
 ``` powershell
-pushd src/SqlDataExtractor
 # Extract 5 rows from the `users` table
-dotnet run -- extract-rows --connection "$DbConnection" --schema "$DbSchema" --table users --limit 5
+sde extract-rows --connection "$DbConnection" --schema "$DbSchema" --table users --limit 5
 
 # Extract a database schema
-dotnet run -- extract-schema --connection "$DbConnection" --schema "$DbSchema"
-popd
+sde extract-schema --connection "$DbConnection" --schema "$DbSchema"
 ```
 
 ## Contributing
