@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.CommandLine;
+using System.IO;
 using System.Threading.Tasks;
 using SqlDataExtractor.Actors;
 using SqlDataExtractor.Core;
@@ -17,6 +19,7 @@ public class Program
     {
         var appCommand = new RootCommand("An application for extracting data from SQL-based databases.");
         Config.RegisterCommands(appCommand, _dbActors);
+        appCommand.Name = Path.GetFileName(Environment.ProcessPath) ?? "";
         return await appCommand.InvokeAsync(args);
     }
 
