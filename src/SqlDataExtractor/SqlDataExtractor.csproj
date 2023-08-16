@@ -3,7 +3,13 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
+        <PackageId>SqlDataExtractor</PackageId>
         <Version>0.1.0</Version>
+        <Authors>B3zaleel</Authors>
+        <Description>A .NET CLI tool that provides functionality for extracting data from SQL databases.</Description>
+        <PackageReadmeFile>https://github.com/B3zaleel/sql-data-extractor/raw/main/README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/B3zaleel/sql-data-extractor</RepositoryUrl>
+        <PackageTags>sql data-extraction postgresql</PackageTags>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>sde</ToolCommandName>
         <PackageOutputPath>./nupkg</PackageOutputPath>
